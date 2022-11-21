@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function Statistics({ id, label, percentage }) {
+export const Statistics = ({ id, label, percentage }) => {
     return (
         <section className="statistics">
             {/* <h2 className="title">"Upload stats"</h2> */}
@@ -8,7 +8,6 @@ export default function Statistics({ id, label, percentage }) {
             <ul className="stat-list">
                 
                 <li className="item">
-                    <span className="label"> {label}</span>
                     <span className="label"> {label}</span>
                     <span className="percentage"> {percentage}%</span>
         
@@ -20,7 +19,8 @@ export default function Statistics({ id, label, percentage }) {
 }
 
 Statistics.propTypes = {
-    label: PropTypes.string,
-    percentage: PropTypes.number,
+    // id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
   
 };

@@ -1,0 +1,24 @@
+.profile {
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.avatar {
+    
+    width: 100px;
+    border-radius: 50px;
+    border: 1px solid red;
+
+}
+
+.label {
+    color: green;
+    cursor: pointer;
+}
+
+.label:hover {
+    color: red;
+}
+
