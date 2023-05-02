@@ -16,17 +16,20 @@ export const Head = styled.thead`
   width: 100%;
   background-color: aqua;
 `;
+
 export const HeadItem = styled.tr`
   display: flex;
   justify-content: space-between;
   width: inherit;
   text-align: center;
 `;
+
 export const Body = styled.tbody`
   display: flex;
   flex-direction: column;
   width: 100%;
 `;
+
 export const BodyItem = styled.tr`
   display: flex;
   justify-content: space-between;
@@ -35,9 +38,6 @@ export const BodyItem = styled.tr`
   
   &:nth-of-type(even) {
     background-color: #d5cdc1;
-
- 
-
 `;
 
 export const HeadIcon = styled.th`
@@ -48,6 +48,7 @@ export const HeadIcon = styled.th`
   color: #524a4d;
   padding: 10px;
 `;
+
 export const BodyIcon = styled.td`
   padding: 10px;
   width: inherit;
@@ -56,31 +57,3 @@ export const BodyIcon = styled.td`
   color: #524a4d;
   justify-content: center;
 `;
-// thead tr {
-//   margin-bottom: 5px;
-//   padding: 10px;
-// }
-// table th {
-//   font-weight: 800;
-//   font-size: 20px;
-//   margin-bottom: 5px;
-//   color: #524a4d;
-// }
-// table td {
-//   padding: 10px;
-//   width: inherit;
-//   font-weight: 700;
-//   font-size: 15px;
-//   color: #524a4d;
-//   /* display: flex; */
-//   justify-content: center;
-// }
-
-// table tr {
-//   display: flex;
-//   justify-content: space-around;
-//   border-bottom: solid 1px #c6cccce6;
-// }
-// table tr:not(:last-child) {
-//   margin-bottom: 5px;
-// }
