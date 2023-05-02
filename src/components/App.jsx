@@ -8,9 +8,11 @@ import Statistics from './Statistics/Statistics';
 import FriendList from './FriendList/FriendList';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
 
+import { Wrapper } from './App.styled';
+
 export const App = () => {
   return (
-    <div>
+    <Wrapper>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -24,6 +26,6 @@ export const App = () => {
       <FriendList friends={friends} />
 
       <TransactionHistory items={transactions} />
-    </div>
+    </Wrapper>
   );
 };

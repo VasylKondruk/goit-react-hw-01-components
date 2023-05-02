@@ -1,21 +1,33 @@
 import PropTypes from 'prop-types';
 
+import {
+  StatisticsWrapper,
+  Title,
+  StatList,
+  Item,
+  Label,
+  Percentage,
+} from './Statistics.styled';
+
+import getRandomHexColor from 'components/Utils/Utils';
+
 const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      <h2 className="title">{title}</h2>
+    <StatisticsWrapper>
+      <Title>{title}</Title>
 
-      <ul className="stat-list">
+      <StatList>
         {stats.map(({ id, label, percentage }) => {
+          const backgroundColor = getRandomHexColor();
           return (
-            <li className="item" key={id}>
-              <span className="label">{label}</span>
-              <span className="percentage">{percentage}</span>
-            </li>
+            <Item key={id} backgroundColor={backgroundColor}>
+              <Label>{label}</Label>
+              <Percentage>{percentage}</Percentage>
+            </Item>
           );
         })}
-      </ul>
-    </section>
+      </StatList>
+    </StatisticsWrapper>
   );
 };
 
@@ -23,7 +35,11 @@ export default Statistics;
 
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
-  id: PropTypes.number,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
 };
