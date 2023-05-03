@@ -14,7 +14,7 @@ import getRandomHexColor from 'components/Utils/Utils';
 const Statistics = ({ title, stats }) => {
   return (
     <StatisticsWrapper>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
 
       <StatList>
         {stats.map(({ id, label, percentage }) => {
@@ -34,7 +34,7 @@ const Statistics = ({ title, stats }) => {
 export default Statistics;
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
